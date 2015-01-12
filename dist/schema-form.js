@@ -197,6 +197,10 @@ angular.module('schemaForm').provider('schemaFormDecorators',
               return scope.form && scope.form.notitle !== true && scope.form.title;
             };
 
+            scope.isRequired = function() {
+              return scope.form.required;
+            };
+
             scope.listToCheckboxValues = function(list) {
               var values = {};
               angular.forEach(list, function(v) {
